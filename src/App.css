@@ -1,0 +1,54 @@
+:root {
+  --background-color-start: #081f36;
+  --background-color-end: #020c1b;
+  --text-color-start: #64ffda;
+  --text-color-end: #00bcd4;
+  --font-family: 'Roboto', sans-serif;
+  --body-margin: 0;
+  --body-padding: 0;
+  --body-min-height: 100vh;
+  --h1-font-size: 2rem;
+  --h1-margin: 0;
+  --h1-padding: 20px;
+  --h1-animation-duration: 5s;
+  --text-color-bright: #8affff;
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  margin: var(--body-margin);
+  padding: var(--body-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: var(--body-min-height);
+  background: linear-gradient(
+    to bottom,
+    var(--background-color-start) 0%,
+    var(--background-color-end) 100%
+  );
+  transition: background 0.3s ease;
+  filter: grayscale(100%);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  margin: var(--h1-margin);
+  padding: var(--h1-padding);
+  animation: fadeIn var(--h1-animation-duration) ease infinite;
+  color: var(--text-color-bright);
+  font-family: var(--font-family);
+  text-shadow: var(--text-shadow);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
